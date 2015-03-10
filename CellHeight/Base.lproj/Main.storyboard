@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CellHeight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JSo-9l-1jf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="45" id="6wn-8o-Vwv" customClass="TstTableViewCell" customModule="CellHeight" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6wn-8o-Vwv" id="S2P-Yb-uUa">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="384" placeholderIntrinsicHeight="22" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeG-Zg-eSS">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BeG-Zg-eSS" firstAttribute="top" secondItem="S2P-Yb-uUa" secondAttribute="top" constant="11" id="31U-ns-zha"/>
+                                                <constraint firstAttribute="trailing" secondItem="BeG-Zg-eSS" secondAttribute="trailing" constant="8" id="74E-4L-VMU"/>
+                                                <constraint firstItem="BeG-Zg-eSS" firstAttribute="leading" secondItem="S2P-Yb-uUa" secondAttribute="leading" constant="8" id="AHQ-04-eRW"/>
+                                                <constraint firstAttribute="bottom" secondItem="BeG-Zg-eSS" secondAttribute="bottom" constant="11" id="Gd2-y9-LDF"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="BeG-Zg-eSS"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="31U-ns-zha"/>
+                                                    <exclude reference="74E-4L-VMU"/>
+                                                    <exclude reference="AHQ-04-eRW"/>
+                                                    <exclude reference="Gd2-y9-LDF"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="BeG-Zg-eSS"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="31U-ns-zha"/>
+                                                    <include reference="74E-4L-VMU"/>
+                                                    <include reference="AHQ-04-eRW"/>
+                                                    <include reference="Gd2-y9-LDF"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tstLabel" destination="BeG-Zg-eSS" id="gtt-Ug-TxU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="gm0-Nn-DlC"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="B7C-2N-qyN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JSo-9l-1jf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3fa-PR-7Lg"/>
+                            <constraint firstItem="JSo-9l-1jf" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Foz-fL-skh"/>
+                            <constraint firstAttribute="trailing" secondItem="JSo-9l-1jf" secondAttribute="trailing" id="RDd-JE-WWr"/>
+                            <constraint firstItem="JSo-9l-1jf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="YWi-PT-a6T"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JSo-9l-1jf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3fa-PR-7Lg"/>
+                                <exclude reference="Foz-fL-skh"/>
+                                <exclude reference="RDd-JE-WWr"/>
+                                <exclude reference="YWi-PT-a6T"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JSo-9l-1jf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3fa-PR-7Lg"/>
+                                <include reference="Foz-fL-skh"/>
+                                <include reference="RDd-JE-WWr"/>
+                                <include reference="YWi-PT-a6T"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JSo-9l-1jf" id="Bhc-9k-wfd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="375"/>
+        </scene>
+    </scenes>
+</document>
